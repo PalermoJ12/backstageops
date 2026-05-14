@@ -9,17 +9,46 @@
 :root {
   --navy: #000000;
   --navy-light: #1a1a1a;
+  --navy-pop: #111111;
   --champagne: #c9a96e;
   --champagne-light: #e8d5b0;
-  --slate: #8a9bb0;
+  --champagne-border: rgba(201,169,110,0.25);
+  --slate: #888888;
   --white: #ffffff;
-  --off-white: #f8f7f5;
-  --text-dark: #1a1a2e;
-  --text-mid: #4a5568;
+  --off-white: #ffffff;
+  --text-dark: #111111;
+  --text-mid: #555555;
+  --text-on-dark: rgba(255,255,255,0.82);
+  --card-border: rgba(255,255,255,0.08);
+  --footer-bg: #000000;
+  --section-alt: #f0ede8;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--champagne);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--champagne-light);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--champagne) #0a0a0a;
 }
 
 body {

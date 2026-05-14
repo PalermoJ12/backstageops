@@ -1,7 +1,9 @@
 .footer {
-  background: #080f18;
+  background: var(--footer-bg, #000000);
   padding: 56px 0 36px;
-  border-top: 1px solid rgba(201,169,110,0.15);
+  border-top: 1px solid var(--champagne-border);
+  position: relative;
+  z-index: 1;
 }
 
 .footer__inner {
@@ -35,7 +37,7 @@
 
 .footer__bir {
   font-size: 0.72rem;
-  color: rgba(138,155,176,0.55);
+  color: rgba(136,136,136,0.55);
   font-style: italic;
 }
 

@@ -6,7 +6,7 @@
 .process__headline {
   font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   font-weight: 800;
-  color: var(--navy);
+  color: var(--text-dark);
   margin-bottom: 12px;
   letter-spacing: -0.02em;
 }
@@ -57,7 +57,7 @@
   width: 2px;
   flex: 1;
   min-height: 40px;
-  background: linear-gradient(to bottom, var(--champagne), rgba(201,169,110,0.2));
+  background: linear-gradient(to bottom, var(--champagne), var(--champagne-border));
   margin: 8px 0;
 }
 
@@ -69,7 +69,7 @@
 .process__step-title {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--text-dark);
   margin-bottom: 8px;
 }
 

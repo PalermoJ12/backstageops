@@ -1,6 +1,10 @@
 .about {
-  background: var(--white);
-  padding: 100px 0;
+  background: var(--section-alt);
+  padding: 120px 0 100px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about__inner {
@@ -37,7 +41,7 @@
 .about__headline {
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   font-weight: 800;
-  color: var(--navy);
+  color: var(--text-dark);
   margin-bottom: 24px;
   letter-spacing: -0.02em;
 }
@@ -59,7 +63,7 @@
 .about__tagline {
   font-size: 1.05rem;
   font-weight: 600;
-  color: var(--navy);
+  color: var(--text-dark);
   font-style: italic;
 }
 

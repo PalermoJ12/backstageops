@@ -6,7 +6,7 @@
 .whyus__headline {
   font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   font-weight: 800;
-  color: var(--navy);
+  color: var(--text-dark);
   line-height: 1.2;
   margin-bottom: 20px;
   letter-spacing: -0.02em;
@@ -28,7 +28,7 @@
 
 .whyus__card {
   background: var(--white);
-  border: 1px solid rgba(13,27,42,0.08);
+  border: 1px solid var(--card-border);
   border-top: 3px solid var(--champagne);
   padding: 36px 28px;
   transition: box-shadow 0.2s;
@@ -48,7 +48,7 @@
 .whyus__card-title {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--text-dark);
   margin-bottom: 12px;
   text-transform: uppercase;
   letter-spacing: 0.06em;

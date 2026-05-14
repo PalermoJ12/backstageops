@@ -8,7 +8,7 @@
   max-width: 720px;
   margin: 0 auto 48px;
   background: var(--navy-light);
-  border: 1px solid rgba(201,169,110,0.25);
+  border: 1px solid var(--champagne-border);
   padding: 56px 56px 48px;
   position: relative;
 }
@@ -26,7 +26,7 @@
 
 .testimonial__text {
   font-size: 1.05rem;
-  color: rgba(255,255,255,0.85);
+  color: var(--text-on-dark);
   line-height: 1.9;
   font-style: italic;
   margin-bottom: 40px;
