@@ -41,9 +41,14 @@ export default function Process() {
           ))}
         </div>
 
-        <button className="btn-primary process__cta">
+        <a
+          href="https://calendar.app.google/5knfkqEAU7a1XNGe9"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary process__cta"
+        >
           Schedule Your Discovery Call
-        </button>
+        </a>
       </div>
     </section>
   );

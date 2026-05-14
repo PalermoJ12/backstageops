@@ -14,9 +14,14 @@ export default function Hero() {
           Premium, systems-driven administrative support for New Jersey business owners
           who are ready to scale without the burnout.
         </p>
-        <button className="btn-primary hero__cta">
+        <a
+          href="https://calendar.app.google/5knfkqEAU7a1XNGe9"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary hero__cta"
+        >
           Schedule Your Discovery Call
-        </button>
+        </a>
       </div>
     </section>
   );
