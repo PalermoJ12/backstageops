@@ -1,0 +1,49 @@
+import { useState, useEffect } from 'react';
+import './Navbar.css';
+
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const links = ['Services', 'About', 'Process'];
+
+  return (
+    <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+      <div className="container navbar__inner">
+        <a href="#hero" className="navbar__logo">
+          Backstage<span>Operations</span>
+        </a>
+
+        <nav className={`navbar__nav ${menuOpen ? 'navbar__nav--open' : ''}`}>
+          {links.map(l => (
+            <a
+              key={l}
+              href={`#${l.toLowerCase()}`}
+              className="navbar__link"
+              onClick={() => setMenuOpen(false)}
+            >
+              {l}
+            </a>
+          ))}
+          <button className="btn-primary navbar__cta" onClick={() => setMenuOpen(false)}>
+            Book a Consultation
+          </button>
+        </nav>
+
+        <button
+          className="navbar__burger"
+          onClick={() => setMenuOpen(o => !o)}
+          aria-label="Toggle menu"
+        >
+          <span /><span /><span />
+        </button>
+      </div>
+    </header>
+  );
+}
