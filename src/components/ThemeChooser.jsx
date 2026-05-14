@@ -44,11 +44,30 @@ function hex8(hex, alpha) {
   return hex + a;
 }
 
+const DEFAULTS = {
+  '--navy':             '#000000',
+  '--navy-light':       '#1a1a1a',
+  '--navy-pop':         '#111111',
+  '--footer-bg':        '#000000',
+  '--champagne':        '#c9a96e',
+  '--champagne-light':  '#e8d5b0',
+  '--champagne-border': 'rgba(201,169,110,0.25)',
+  '--text-on-dark':     'rgba(255,255,255,0.82)',
+  '--card-border':      'rgba(255,255,255,0.08)',
+  '--white':            '#ffffff',
+  '--off-white':        '#ffffff',
+  '--section-alt':      '#f0ede8',
+  '--text-dark':        '#111111',
+  '--text-mid':         '#555555',
+  '--slate':            '#888888',
+};
+
 function applyTheme(primary, accent) {
   const root = document.documentElement;
 
   if (!primary) {
-    root.removeAttribute('style');
+    // Reset every variable explicitly so nothing lingers from a previous theme
+    Object.entries(DEFAULTS).forEach(([k, v]) => root.style.setProperty(k, v));
     return;
   }
 
@@ -99,11 +118,33 @@ function applyTheme(primary, accent) {
   }
 }
 
+function applyAllBlack() {
+  const root = document.documentElement;
+  root.style.setProperty('--navy',          '#000000');
+  root.style.setProperty('--navy-light',    '#111111');
+  root.style.setProperty('--navy-pop',      '#0a0a0a');
+  root.style.setProperty('--footer-bg',     '#000000');
+  root.style.setProperty('--champagne',     '#c9a96e');
+  root.style.setProperty('--champagne-light','#e8d5b0');
+  root.style.setProperty('--champagne-border','rgba(201,169,110,0.25)');
+  root.style.setProperty('--text-on-dark',  'rgba(255,255,255,0.85)');
+  root.style.setProperty('--card-border',   'rgba(255,255,255,0.09)');
+  // Light sections also go dark
+  root.style.setProperty('--white',         '#0d0d0d');
+  root.style.setProperty('--off-white',     '#111111');
+  root.style.setProperty('--section-alt',   '#161616');
+  root.style.setProperty('--text-dark',     '#f0f0f0');
+  root.style.setProperty('--text-mid',      'rgba(255,255,255,0.65)');
+  root.style.setProperty('--slate',         'rgba(255,255,255,0.45)');
+}
+
 export default function ThemeChooser() {
-  const [selected, setSelected] = useState([]);
-  const [open, setOpen]         = useState(false);
+  const [selected, setSelected]   = useState([]);
+  const [allBlack, setAllBlack]   = useState(false);
+  const [open, setOpen]           = useState(false);
 
   const toggle = (swatch) => {
+    setAllBlack(false);
     setSelected(prev => {
       const exists = prev.find(s => s.hex === swatch.hex);
       if (exists) return prev.filter(s => s.hex !== swatch.hex);
@@ -112,11 +153,20 @@ export default function ThemeChooser() {
     });
   };
 
-  useEffect(() => {
-    applyTheme(selected[0] ?? null, selected[1] ?? null);
-  }, [selected]);
+  const handleAllBlack = () => {
+    setSelected([]);
+    setAllBlack(a => !a);
+  };
 
-  const reset = () => setSelected([]);
+  useEffect(() => {
+    if (allBlack) {
+      applyAllBlack();
+    } else {
+      applyTheme(selected[0] ?? null, selected[1] ?? null);
+    }
+  }, [selected, allBlack]);
+
+  const reset = () => { setSelected([]); setAllBlack(false); };
 
   const previewBg = selected.length === 2
     ? `linear-gradient(135deg, ${selected[0].hex} 50%, ${selected[1].hex} 50%)`
@@ -144,59 +194,15 @@ export default function ThemeChooser() {
             <button className="theme-panel__close" onClick={() => setOpen(false)}>✕</button>
           </div>
 
-          {/* Live preview bar */}
-          <div className="theme-panel__bar" style={{ background: previewBg }}>
-            {selected.length === 0 && <span className="theme-panel__bar-hint">Pick a base color</span>}
-            {selected.length === 1 && (
-              <span className="theme-panel__bar-hint" style={{ color: selected[0].isDark ? '#fff' : '#111' }}>
-                {selected[0].name} — now pick an accent
-              </span>
-            )}
-            {selected.length === 2 && (
-              <span className="theme-panel__bar-hint" style={{ color: selected[0].isDark ? '#fff' : '#111' }}>
-                {selected[0].name} + {selected[1].name}
-              </span>
-            )}
+          <div className="theme-preset-row">
+            <button
+              className={`theme-preset-btn ${allBlack ? 'theme-preset-btn--active' : ''}`}
+              onClick={handleAllBlack}
+            >
+              <span className="theme-preset-btn__dot" style={{ background: '#000', border: '1px solid #c9a96e' }} />
+              All Black
+            </button>
           </div>
-
-          {PALETTES.map(palette => (
-            <div key={palette.group} className="theme-group">
-              <span className="theme-group__label">{palette.group}</span>
-              <div className="theme-group__swatches">
-                {palette.swatches.map(sw => {
-                  const selIndex = selected.findIndex(s => s.hex === sw.hex);
-                  const isSelected = selIndex !== -1;
-                  const role = isSelected ? (selIndex === 0 ? 'Base' : 'Accent') : null;
-                  return (
-                    <button
-                      key={sw.hex}
-                      className={`theme-swatch ${isSelected ? 'theme-swatch--active' : ''}`}
-                      style={{
-                        background: sw.hex,
-                        outline: isSelected
-                          ? `3px solid ${sw.isDark ? '#c9a96e' : '#1a1a1a'}`
-                          : '2px solid transparent',
-                      }}
-                      onClick={() => toggle(sw)}
-                      title={`${sw.name}${role ? ` (${role})` : ''}`}
-                    >
-                      {isSelected && (
-                        <span
-                          className="theme-swatch__badge"
-                          style={{
-                            background: sw.isDark ? '#c9a96e' : '#1a1a1a',
-                            color:      sw.isDark ? '#000'    : '#fff',
-                          }}
-                        >
-                          {selIndex === 0 ? 'B' : 'A'}
-                        </span>
-                      )}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
 
           <button className="theme-reset" onClick={reset}>Reset to Default</button>
         </div>
