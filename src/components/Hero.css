@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   background:
-    linear-gradient(135deg, var(--navy) 0%, #162840 60%, #1e3a54 100%);
+    linear-gradient(135deg, var(--navy) 0%, #111111 60%, #1a1a1a 100%);
   overflow: hidden;
 }
 

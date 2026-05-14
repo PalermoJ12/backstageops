@@ -33,9 +33,15 @@ export default function Navbar() {
               {l}
             </a>
           ))}
-          <button className="btn-primary navbar__cta" onClick={() => setMenuOpen(false)}>
+          <a
+            href="https://calendar.app.google/5knfkqEAU7a1XNGe9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary navbar__cta"
+            onClick={() => setMenuOpen(false)}
+          >
             Book a Consultation
-          </button>
+          </a>
         </nav>
 
         <button

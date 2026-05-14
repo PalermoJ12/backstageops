@@ -6,6 +6,7 @@ import Process from './components/Process';
 import About from './components/About';
 import Testimonial from './components/Testimonial';
 import Footer from './components/Footer';
+import ThemeChooser from './components/ThemeChooser';
 import './App.css';
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
       <About />
       <Testimonial />
       <Footer />
+      <ThemeChooser />
     </>
   );
 }

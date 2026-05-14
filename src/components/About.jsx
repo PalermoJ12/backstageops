@@ -1,3 +1,4 @@
+import hannaPhoto from '../assets/Hanna.png';
 import './About.css';
 
 export default function About() {
@@ -5,9 +6,7 @@ export default function About() {
     <section className="about" id="about-founder">
       <div className="container about__inner">
         <div className="about__photo">
-          <div className="about__photo-placeholder">
-            <span>HA</span>
-          </div>
+          <img src={hannaPhoto} alt="Hanna Agawin" className="about__photo-img" />
         </div>
 
         <div className="about__content">
