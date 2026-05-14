@@ -18,11 +18,7 @@ export default function Footer() {
           <a href="#services">Services</a>
           <a href="#about">About</a>
           <a href="#process">Process</a>
-          <a
-            href={`mailto:bckstg.ops@gmail.com?subject=Let's Connect&body=Hi Hanna,%0A%0AI came across Backstage Operations and I'm interested in learning more about your services.%0A%0AHere's a bit about my business and what I'm looking for:%0A%0A[Tell us about your business and needs here]%0A%0ALooking forward to connecting!%0A%0ABest regards,%0A[Your Name]`}
-          >
-            Contact
-          </a>
+          <a href="#contact">Contact</a>
         </nav>
 
         <div className="footer__social">

@@ -4,9 +4,10 @@ import WhyUs from './components/WhyUs';
 import Services from './components/Services';
 import Process from './components/Process';
 import About from './components/About';
+import Team from './components/Team';
 import Testimonial from './components/Testimonial';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ThemeChooser from './components/ThemeChooser';
 import './App.css';
 
 export default function App() {
@@ -18,9 +19,10 @@ export default function App() {
       <Services />
       <Process />
       <About />
+      <Team />
       <Testimonial />
+      <Contact />
       <Footer />
-      <ThemeChooser />
     </>
   );
 }
