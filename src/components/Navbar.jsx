@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import logo from '../assets/logo.png';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -17,7 +18,8 @@ export default function Navbar() {
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="container navbar__inner">
         <a href="#hero" className="navbar__logo">
-          Backstage<span>Operations</span>
+          <img src={logo} alt="Backstage Operations" className="navbar__logo-img" />
+          <span className="navbar__logo-text">Backstage<em>Operations</em></span>
         </a>
 
         <nav className={`navbar__nav ${menuOpen ? 'navbar__nav--open' : ''}`}>

@@ -21,16 +21,31 @@
 }
 
 .navbar__logo {
-  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.navbar__logo-img {
+  height: 36px;
+  width: 36px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.navbar__logo-text {
+  font-size: 1rem;
   font-weight: 800;
   color: var(--white);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-.navbar__logo span {
+.navbar__logo-text em {
+  font-style: normal;
   color: var(--champagne);
-  margin-left: 6px;
+  margin-left: 5px;
 }
 
 .navbar__nav {
