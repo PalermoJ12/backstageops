@@ -5,6 +5,7 @@ import Services from './components/Services';
 import Process from './components/Process';
 import About from './components/About';
 import Team from './components/Team';
+import Results from './components/Results';
 import Testimonial from './components/Testimonial';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -16,10 +17,11 @@ export default function App() {
       <Navbar />
       <Hero />
       <WhyUs />
-      <Services />
-      <Process />
       <About />
       <Team />
+      <Results />
+      <Process />
+      <Services />
       <Testimonial />
       <Contact />
       <Footer />

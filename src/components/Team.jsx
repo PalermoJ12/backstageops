@@ -3,21 +3,25 @@ import './Team.css';
 const members = [
   {
     name: 'Operations & Systems',
+    initials: 'OS',
     position: 'Workflow design, process documentation & tool setup',
     photo: null,
   },
   {
     name: 'Client Delivery & Experience',
+    initials: 'CDE',
     position: 'Onboarding, communication & client success',
     photo: null,
   },
   {
     name: 'Growth & Marketing',
+    initials: 'GM',
     position: 'Content, outreach & brand presence',
     photo: null,
   },
   {
     name: 'Finance & Legal',
+    initials: 'FL',
     position: 'Invoicing, compliance & administrative filings',
     photo: null,
   },
@@ -40,7 +44,7 @@ export default function Team() {
                 {m.photo
                   ? <img src={m.photo} alt={m.name} className="team__photo" />
                   : <div className="team__photo-placeholder">
-                      <span>{m.name.split(' ').map(w => w[0]).slice(0, 2).join('')}</span>
+                      <span>{m.initials}</span>
                     </div>
                 }
                 <div className="team__photo-accent" />

@@ -12,7 +12,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const links = ['Services', 'About', 'Process'];
+  const links = ['About', 'Services', 'Process'];
 
   return (
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>

@@ -4,8 +4,8 @@ import './Testimonial.css';
 const testimonials = [
   {
     text: "One of the best virtual assistants I've ever worked with, she completes every task on time and consistently delivers high-quality work. Thanks to her, I've been able to boost my productivity by threefold and free up my schedule. I'm currently working with her and plan to continue for the long term.",
-    name: 'El Hussein Saad Allah',
-    role: 'Google Review',
+    name: 'E.H.S. Allah',
+    role: 'Hype',
     initial: 'E',
   },
   {

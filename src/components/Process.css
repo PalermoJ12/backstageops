@@ -1,19 +1,20 @@
 .process {
-  background: var(--off-white);
+  background: var(--navy);
   padding: 100px 0;
+  border-top: 1px solid var(--champagne-border);
 }
 
 .process__headline {
   font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   font-weight: 800;
-  color: var(--text-dark);
+  color: var(--white);
   margin-bottom: 12px;
   letter-spacing: -0.02em;
 }
 
 .process__sub {
   font-size: 0.95rem;
-  color: var(--text-mid);
+  color: var(--text-on-dark);
   margin-bottom: 60px;
 }
 
@@ -42,7 +43,8 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: var(--navy);
+  background: var(--navy-light);
+  border: 1px solid var(--champagne-border);
   color: var(--champagne);
   font-size: 0.85rem;
   font-weight: 800;
@@ -69,13 +71,13 @@
 .process__step-title {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--white);
   margin-bottom: 8px;
 }
 
 .process__step-body {
   font-size: 0.92rem;
-  color: var(--text-mid);
+  color: var(--text-on-dark);
   line-height: 1.75;
 }
 

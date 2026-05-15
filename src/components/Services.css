@@ -1,10 +1,7 @@
 .services {
   background: var(--navy);
-  padding: 120px 0 100px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 100px 0;
+  border-top: 1px solid var(--champagne-border);
 }
 
 .services__headline {
@@ -17,7 +14,7 @@
 
 .services__sub {
   font-size: 0.95rem;
-  color: var(--slate);
+  color: var(--text-on-dark);
   margin-bottom: 60px;
   max-width: 500px;
 }

@@ -1,11 +1,15 @@
 import './Services.css';
 
+const MAIL_LINK = 'mailto:bckstg.ops@gmail.com?subject=I%20want%20to%20work%20with%20you';
+const BOOKING_LINK = 'https://calendar.app.google/5knfkqEAU7a1XNGe9';
+
 const tiers = [
   {
     name: 'Essential Admin',
     focus: 'Inbox & Calendar',
     features: ['Email Management', 'Scheduling', 'File Organization'],
     cta: 'Get Started',
+    href: MAIL_LINK,
     popular: false,
   },
   {
@@ -13,6 +17,7 @@ const tiers = [
     focus: 'Systems & Workflow',
     features: ['Everything in Essential', 'Notion / CRM Setup', 'Client Onboarding'],
     cta: 'Most Popular',
+    href: MAIL_LINK,
     popular: true,
   },
   {
@@ -20,6 +25,7 @@ const tiers = [
     focus: 'Total Integration',
     features: ['Everything in Operations', 'Workflow Automation', 'Project Coordination'],
     cta: 'Contact for Custom',
+    href: BOOKING_LINK,
     popular: false,
   },
 ];
@@ -50,9 +56,14 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
-              <button className={tier.popular ? 'btn-primary' : 'btn-navy'}>
+              <a
+                href={tier.href}
+                target={tier.href.startsWith('mailto') ? '_self' : '_blank'}
+                rel="noopener noreferrer"
+                className={tier.popular ? 'btn-primary' : 'btn-navy'}
+              >
                 {tier.cta}
-              </button>
+              </a>
             </div>
           ))}
         </div>
