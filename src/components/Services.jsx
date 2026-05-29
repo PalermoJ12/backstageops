@@ -90,6 +90,28 @@ export default function Services() {
           * The binding fee ($150 for Catalyst / $250 for Growth) covers talent allocation and a custom systems audit for your business. No hidden costs beyond this.
         </p>
 
+        <div className="services__addons">
+          <h3 className="services__addons-title">Start Up Launch Add-Ons</h3>
+          <div className="services__addons-grid">
+            <div className="services__addon-card">
+              <h4>Branding Kit</h4>
+              <p>Logo & Guidelines</p>
+            </div>
+            <div className="services__addon-card">
+              <h4>Website Launch</h4>
+              <p>3-5 Page Responsive</p>
+            </div>
+            <div className="services__addon-card">
+              <h4>Social Setup</h4>
+              <p>Optimization & Grid</p>
+            </div>
+            <div className="services__addon-card">
+              <h4>Accounting</h4>
+              <p>Vetted Partner Intro</p>
+            </div>
+          </div>
+        </div>
+
         <div className="services__ondemand">
           <p className="services__ondemand-text">
             Just need a quick project done? Get an <strong>On-Demand 10-hour starter block for $100</strong> to test the waters — zero long-term commitment.
