@@ -4,7 +4,7 @@ import './Contact.css';
 
 // ─── Fill these in from your EmailJS dashboard ───────────────────────────────
 const EMAILJS_SERVICE_ID  = 'service_jpbhlei';
-const EMAILJS_TEMPLATE_ID = 'template_pcb5547';
+const EMAILJS_TEMPLATE_ID = 'template_tccjvyb';
 const EMAILJS_PUBLIC_KEY  = 'ZH1Ox78t1ZC_6BVSg';
 // ─────────────────────────────────────────────────────────────────────────────
 
