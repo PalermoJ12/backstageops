@@ -2,19 +2,19 @@ import './Process.css';
 
 const steps = [
   {
-    num: '01',
-    title: 'The Strategy Call',
-    body: 'We audit your current bottlenecks and find exactly where you need air.',
+    num: '5:00 PM',
+    title: 'The Handoff',
+    body: 'Send your list of repetitive tasks, data entries, or unread emails as you wrap up your workday.',
   },
   {
-    num: '02',
-    title: 'The Systems Setup',
-    body: 'We document your processes so nothing falls through the cracks.',
+    num: '12:00 AM',
+    title: 'Quiet Execution',
+    body: 'Our VAs securely execute your backlog overnight while your office is quiet.',
   },
   {
-    num: '03',
-    title: 'The Seamless Handoff',
-    body: 'Your dedicated team takes over, and you get your time back.',
+    num: '8:00 AM',
+    title: 'Clean Slate Delivery',
+    body: 'Wake up to an emptied inbox, updated customer records, and completed reports. Open your laptop with total relief.',
   },
 ];
 
@@ -23,8 +23,8 @@ export default function Process() {
     <section className="process" id="process">
       <div className="container">
         <span className="section-label">How It Works</span>
-        <h2 className="process__headline">The 3-Step Handoff</h2>
-        <p className="process__sub">Getting started is easier than you think.</p>
+        <h2 className="process__headline">The 24-Hour Operations Loop</h2>
+        <p className="process__sub">Your backlog cleared while you sleep — every single night.</p>
 
         <div className="process__steps">
           {steps.map((s, i) => (
@@ -42,7 +42,7 @@ export default function Process() {
         </div>
 
         <a
-          href="https://calendar.app.google/5knfkqEAU7a1XNGe9"
+          href="https://book.titan.email/discovery-call"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-primary process__cta"

@@ -1,11 +1,12 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import NewToVA from './components/NewToVA';
 import WhyUs from './components/WhyUs';
-import Services from './components/Services';
-import Process from './components/Process';
 import About from './components/About';
 import Team from './components/Team';
 import Results from './components/Results';
+import Process from './components/Process';
+import Services from './components/Services';
 import Testimonial from './components/Testimonial';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -16,6 +17,7 @@ export default function App() {
     <>
       <Navbar />
       <Hero />
+      <NewToVA />
       <WhyUs />
       <About />
       <Team />

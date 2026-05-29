@@ -3,17 +3,17 @@ import './WhyUs.css';
 const differentiators = [
   {
     title: 'Managed Support',
-    body: "You don't just get a VA; you get a system supervised by an operations strategist.",
+    body: "You don't just get a VA — you get a fully managed team that handles vetting, training, quality checks, and reporting. You just reap the results.",
     icon: '◈',
   },
   {
-    title: 'EST Sync',
-    body: 'We work your hours. Real-time support when your business is actually moving.',
+    title: 'Overnight Execution',
+    body: 'We work while you sleep. Your backlog gets cleared overnight so you wake up to a clean slate every morning.',
     icon: '◷',
   },
   {
-    title: 'Systems First',
-    body: "We don't just \"do tasks\" — we build workflows that stick.",
+    title: 'Time Reclaimed',
+    body: "Every task we take off your plate is time returned to you — to grow, to lead, or simply to rest.",
     icon: '◎',
   },
 ];

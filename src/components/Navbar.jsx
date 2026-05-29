@@ -34,7 +34,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://calendar.app.google/5knfkqEAU7a1XNGe9"
+            href="https://book.titan.email/discovery-call"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary navbar__cta"

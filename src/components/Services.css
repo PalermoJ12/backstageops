@@ -73,7 +73,82 @@
   font-size: 1.3rem;
   font-weight: 800;
   color: var(--white);
-  margin-bottom: 28px;
+  margin-bottom: 8px;
+}
+
+.services__highlight {
+  font-size: 0.82rem;
+  color: var(--text-on-dark);
+  font-style: italic;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.services__pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.services__price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--champagne);
+  letter-spacing: -0.02em;
+}
+
+.services__binding {
+  font-size: 0.75rem;
+  color: var(--slate);
+  letter-spacing: 0.02em;
+}
+
+.services__binding-note {
+  font-size: 0.78rem;
+  color: var(--slate);
+  text-align: center;
+  margin-top: 32px;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.services__ondemand {
+  margin-top: 48px;
+  border: 1px solid var(--champagne-border);
+  background: var(--navy-light);
+  padding: 32px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.services__ondemand-text {
+  font-size: 0.95rem;
+  color: var(--text-on-dark);
+  line-height: 1.6;
+}
+
+.services__ondemand-text strong {
+  color: var(--champagne);
+}
+
+.services__ondemand-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .services__ondemand {
+    flex-direction: column;
+    padding: 24px;
+    text-align: center;
+  }
 }
 
 .services__features {

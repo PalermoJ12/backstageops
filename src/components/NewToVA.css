@@ -1,0 +1,76 @@
+.newtova {
+  background: var(--section-alt);
+  padding: 100px 0;
+  border-top: 1px solid var(--champagne-border);
+}
+
+.newtova__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.newtova__headline {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.newtova__headline em {
+  font-style: normal;
+  color: var(--champagne);
+}
+
+.newtova__sub {
+  font-size: 0.95rem;
+  color: var(--text-mid);
+  line-height: 1.8;
+}
+
+.newtova__right {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.newtova__point {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.newtova__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--champagne);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.newtova__point-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.newtova__point-body {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .newtova__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}

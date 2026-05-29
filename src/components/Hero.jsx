@@ -5,17 +5,16 @@ export default function Hero() {
     <section className="hero" id="hero">
       <div className="hero__overlay" />
       <div className="container hero__content">
-        <span className="section-label">Premium Administrative Support</span>
+        <span className="section-label">Virtual Assistant & Operations Support</span>
         <h1 className="hero__headline">
-          We Manage Your Backstage,<br />
-          So You Can <em>Own the Stage.</em>
+          We Work While You Sleep.<br />
+          <em>Wake Up to 'Done.'</em>
         </h1>
         <p className="hero__sub">
-          Premium, systems-driven administrative support for New Jersey business owners
-          who are ready to scale without the burnout.
+          Stop playing admin and start being the CEO. Backstage Operations provides fully managed virtual support that clears your backlog overnight, giving small business owners their mornings back without the training or management overhead.
         </p>
         <a
-          href="https://calendar.app.google/5knfkqEAU7a1XNGe9"
+          href="https://book.titan.email/discovery-call"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-primary hero__cta"
