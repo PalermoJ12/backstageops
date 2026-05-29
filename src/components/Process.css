@@ -28,7 +28,8 @@
 
 .process__step {
   display: flex;
-  gap: 28px;
+  gap: 32px;
+  align-items: flex-start;
 }
 
 .process__step-left {
@@ -36,23 +37,24 @@
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
-  width: 56px;
+  width: 90px;
 }
 
 .process__num {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
+  width: 90px;
+  height: 40px;
+  border-radius: 20px;
   background: var(--navy-light);
   border: 1px solid var(--champagne-border);
   color: var(--champagne);
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
   letter-spacing: 0.05em;
   flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .process__connector {
@@ -64,7 +66,7 @@
 }
 
 .process__step-right {
-  padding-top: 12px;
+  padding-top: 8px;
   padding-bottom: 40px;
 }
 
