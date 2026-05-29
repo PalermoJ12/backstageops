@@ -65,7 +65,6 @@ export default function Services() {
               <div className="services__pricing">
                 <span className="services__price">{tier.price}</span>
                 <span className="services__hours">{tier.hours}</span>
-                <span className="services__binding">+ {tier.bindingFee} binding fee</span>
               </div>
               <ul className="services__features">
                 {tier.features.map(f => (
@@ -85,6 +84,7 @@ export default function Services() {
             </div>
           ))}
         </div>
+
 
         <p className="services__binding-note">
           * The binding fee ($150 for Catalyst / $250 for Growth) covers talent allocation and a custom systems audit for your business. No hidden costs beyond this.
