@@ -100,6 +100,13 @@
   letter-spacing: -0.02em;
 }
 
+.services__hours {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-on-dark);
+  letter-spacing: 0.04em;
+}
+
 .services__binding {
   font-size: 0.75rem;
   color: var(--slate);

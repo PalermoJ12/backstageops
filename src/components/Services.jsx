@@ -9,7 +9,8 @@ const tiers = [
     focus: 'Inbox & Calendar',
     highlight: 'Perfect for essential admin, data cleanup, and inbox management',
     price: '$399/mo',
-    bindingFee: '$150–$250',
+    hours: '10 hours/week',
+    bindingFee: '$150',
     features: ['Email Management', 'Scheduling', 'File Organization', 'Data Cleanup'],
     cta: 'Get Started',
     href: MAIL_LINK,
@@ -20,8 +21,9 @@ const tiers = [
     focus: 'Systems & Workflow',
     highlight: 'Perfect for scaling operations, CRM setup, and deeper workflow structure',
     price: '$799/mo',
-    bindingFee: '$450',
-    features: ['Everything in Catalyst', 'Notion / CRM Setup', 'Client Onboarding', 'Workflow Structure'],
+    hours: '20 hours/week',
+    bindingFee: '$250',
+    features: ['Everything in Catalyst', 'CRM Setup', 'Client Onboarding', 'Workflow Structure'],
     cta: 'Most Popular',
     href: MAIL_LINK,
     popular: true,
@@ -31,6 +33,7 @@ const tiers = [
     focus: 'Total Integration',
     highlight: 'Custom-scoped for fully integrated operations management',
     price: 'Custom',
+    hours: '40 hours/week',
     bindingFee: 'Custom',
     features: ['Everything in Growth', 'Workflow Automation', 'Project Coordination', 'Dedicated Strategist'],
     cta: 'Book a Call',
@@ -61,6 +64,7 @@ export default function Services() {
               <p className="services__highlight">{tier.highlight}</p>
               <div className="services__pricing">
                 <span className="services__price">{tier.price}</span>
+                <span className="services__hours">{tier.hours}</span>
                 <span className="services__binding">+ {tier.bindingFee} binding fee</span>
               </div>
               <ul className="services__features">
@@ -83,7 +87,7 @@ export default function Services() {
         </div>
 
         <p className="services__binding-note">
-          * The binding fee ($150–$250 for Catalyst / $450 for Growth) covers talent allocation and a custom systems audit for your business. No hidden costs beyond this.
+          * The binding fee ($150 for Catalyst / $250 for Growth) covers talent allocation and a custom systems audit for your business. No hidden costs beyond this.
         </p>
 
         <div className="services__ondemand">

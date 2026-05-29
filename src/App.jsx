@@ -19,8 +19,8 @@ export default function App() {
       <Hero />
       <NewToVA />
       <WhyUs />
-      <About />
-      <Team />
+      {/* <About /> */}
+      {/* <Team /> */}
       {/* <Results /> */}
       <Process />
       <Services />

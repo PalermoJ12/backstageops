@@ -10,7 +10,7 @@ export default function Footer() {
           </span>
           <p className="footer__copy">© 2026 Backstage Operations. All rights reserved.</p>
           <p className="footer__bir">
-            Official BIR Registration Launching June 2026.
+            BIR Registered May 2026.
           </p>
         </div>
 

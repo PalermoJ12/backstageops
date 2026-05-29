@@ -1,10 +1,6 @@
 .about {
   background: var(--section-alt);
-  padding: 120px 0 100px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 80px 0;
 }
 
 .about__inner {
