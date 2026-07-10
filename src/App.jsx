@@ -1,31 +1,30 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import NewToVA from './components/NewToVA';
-import WhyUs from './components/WhyUs';
-import About from './components/About';
-import Team from './components/Team';
-import Results from './components/Results';
-import Process from './components/Process';
-import Services from './components/Services';
+import Loop from './components/Loop';
+import WhoWeServe from './components/WhoWeServe';
+import Philosophy from './components/Philosophy';
+import Pricing from './components/Pricing';
 import Testimonial from './components/Testimonial';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import useReveal from './useReveal';
 import './App.css';
 
 export default function App() {
+  useReveal();
+
   return (
     <>
       <Navbar />
-      <Hero />
-      <NewToVA />
-      <WhyUs />
-      {/* <About /> */}
-      {/* <Team /> */}
-      {/* <Results /> */}
-      <Process />
-      <Services />
-      <Testimonial />
-      <Contact />
+      <main>
+        <Hero />
+        <Loop />
+        <WhoWeServe />
+        <Philosophy />
+        <Pricing />
+        <Testimonial />
+        <Contact />
+      </main>
       <Footer />
     </>
   );

@@ -2,11 +2,9 @@ import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 
-// ─── Fill these in from your EmailJS dashboard ───────────────────────────────
 const EMAILJS_SERVICE_ID  = 'service_jpbhlei';
 const EMAILJS_TEMPLATE_ID = 'template_tccjvyb';
 const EMAILJS_PUBLIC_KEY  = 'ZH1Ox78t1ZC_6BVSg';
-// ─────────────────────────────────────────────────────────────────────────────
 
 export default function Contact() {
   const formRef = useRef();
@@ -26,77 +24,59 @@ export default function Contact() {
   };
 
   return (
-    <section className="contact" id="contact">
-      <div className="container contact__inner">
-        <div className="contact__left">
-          <span className="section-label">Get in Touch</span>
-          <h2 className="contact__headline">Let's Connect</h2>
-          <p className="contact__sub">
-            Ready to hand off the back office? Fill out the form and we'll get back to you within 24 hours.
+    <section className="inquire section" id="contact">
+      <div className="container inquire__inner">
+        <div className="inquire__intro reveal">
+          <span className="eyebrow">Request Partnership</span>
+          <h2 className="display inquire__title">
+            Let's run the<br /><em>backstage together.</em>
+          </h2>
+          <p className="lede inquire__sub">
+            We take on a limited number of partners at a time. Tell us about your
+            work and where the backlog builds, and we'll respond within 24 hours.
           </p>
         </div>
 
-        <form ref={formRef} onSubmit={handleSubmit} className="contact__form">
-          <div className="contact__row">
-            <div className="contact__field">
+        <form ref={formRef} onSubmit={handleSubmit} className="inquire__form reveal">
+          <div className="inquire__row">
+            <div className="inquire__field">
               <label htmlFor="from_name">Full Name</label>
-              <input
-                id="from_name"
-                name="from_name"
-                type="text"
-                placeholder="Jane Smith"
-                required
-              />
+              <input id="from_name" name="from_name" type="text" placeholder="Your name" required />
             </div>
-            <div className="contact__field">
-              <label htmlFor="reply_to">Email Address</label>
-              <input
-                id="reply_to"
-                name="reply_to"
-                type="email"
-                placeholder="jane@example.com"
-                required
-              />
+            <div className="inquire__field">
+              <label htmlFor="reply_to">Email</label>
+              <input id="reply_to" name="reply_to" type="email" placeholder="you@studio.com" required />
             </div>
           </div>
 
-          <div className="contact__field">
-            <label htmlFor="business">Business Name</label>
-            <input
-              id="business"
-              name="business"
-              type="text"
-              placeholder="Your Business"
-            />
+          <div className="inquire__field">
+            <label htmlFor="business">Business / Practice</label>
+            <input id="business" name="business" type="text" placeholder="Label, studio, or practice name" />
           </div>
 
-          <div className="contact__field">
-            <label htmlFor="message">Message</label>
+          <div className="inquire__field">
+            <label htmlFor="message">What should we take off your plate?</label>
             <textarea
               id="message"
               name="message"
               rows="5"
-              placeholder="Tell us about your business and what you need help with..."
+              placeholder="Tell us about your work and where the backlog builds up…"
               required
             />
           </div>
 
-          <button
-            type="submit"
-            className="btn-primary contact__submit"
-            disabled={status === 'sending'}
-          >
-            {status === 'sending' ? 'Sending…' : 'Send Message'}
+          <button type="submit" className="btn btn--solid inquire__submit" disabled={status === 'sending'}>
+            {status === 'sending' ? 'Sending…' : 'Submit Inquiry'}
           </button>
 
           {status === 'success' && (
-            <p className="contact__feedback contact__feedback--success">
-              Message sent! We'll be in touch within 24 hours.
+            <p className="inquire__feedback inquire__feedback--ok">
+              Received. We'll be in touch within 24 hours.
             </p>
           )}
           {status === 'error' && (
-            <p className="contact__feedback contact__feedback--error">
-              Something went wrong. Please email us directly at bckstg.ops@gmail.com
+            <p className="inquire__feedback inquire__feedback--err">
+              Something went wrong. Please email us directly at admin@backstageops.com
             </p>
           )}
         </form>

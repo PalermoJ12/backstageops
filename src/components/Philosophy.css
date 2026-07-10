@@ -1,0 +1,103 @@
+.philosophy {
+  border-top: 1px solid var(--hairline);
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(201, 169, 110, 0.06) 0%, transparent 60%),
+    var(--onyx-raised);
+}
+
+.philosophy__inner {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: clamp(48px, 7vw, 100px);
+}
+
+/* Portrait: the near-white studio shot sits in a soft light panel
+   so its background reads as an intentional editorial plate on the dark page. */
+.philosophy__media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  isolation: isolate;
+}
+
+.philosophy__panel {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, #f4f1ea 0%, #e9e4da 62%, #ded7c9 100%);
+  z-index: 0;
+}
+
+.philosophy__media img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62% 30%;
+  display: block;
+  filter: contrast(1.02) saturate(0.96);
+}
+
+.philosophy__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: inset 0 0 50px 6px rgba(222, 215, 201, 0.55);
+}
+
+.philosophy__frame {
+  position: absolute;
+  inset: -16px 16px 16px -16px;
+  border: 1px solid var(--hairline-gold);
+  z-index: -1;
+}
+
+.philosophy__quote {
+  font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1.38;
+  letter-spacing: -0.005em;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 26px 0 32px;
+}
+
+.philosophy__quote em {
+  font-style: italic;
+  color: var(--champagne);
+}
+
+.philosophy__attr {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--text-quiet);
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.philosophy__attr::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--champagne-dim);
+}
+
+@media (max-width: 880px) {
+  .philosophy__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .philosophy__media {
+    max-width: 360px;
+    order: -1;
+  }
+
+  .philosophy__frame {
+    inset: -12px 12px 12px -12px;
+  }
+}

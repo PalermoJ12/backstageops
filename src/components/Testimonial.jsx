@@ -1,82 +1,49 @@
-import { useState, useEffect, useRef } from 'react';
 import './Testimonial.css';
 
 const testimonials = [
   {
-    text: "One of the best virtual assistants I've ever worked with, she completes every task on time and consistently delivers high-quality work. Thanks to her, I've been able to boost my productivity by threefold and free up my schedule. I'm currently working with her and plan to continue for the long term.",
+    text: "One of the best virtual assistants I've ever worked with. Every task on time, consistently high quality. Thanks to her I've tripled my productivity and freed up my schedule. I plan to continue for the long term.",
     name: 'E.H.S. Allah',
-    role: 'Hype',
+    title: 'Founder, Hype',
     initial: 'E',
   },
   {
-    text: 'You are a perfect person to work with. Her dedicated to my business, flexible with time, and very easy to communicate with.',
+    text: 'A perfect person to work with. Dedicated to my business, flexible with time, and genuinely easy to communicate with.',
     name: 'J. Anwar',
-    role: 'Event DJ',
+    title: 'Touring Event DJ',
     initial: 'J',
   },
   {
-    text: 'She took responsibility off of me for some things.',
+    text: 'She took real responsibility off my plate. I finally stopped carrying everything myself.',
     name: 'N. Mathis',
-    role: 'Wig Designer',
+    title: 'Independent Wig Designer',
     initial: 'N',
   },
 ];
 
 export default function Testimonial() {
-  const [index, setIndex] = useState(0);
-  const [visible, setVisible] = useState(true);
-
-  const go = (next) => {
-    setVisible(false);
-    setTimeout(() => {
-      setIndex(next);
-      setVisible(true);
-    }, 300);
-  };
-
-  const prev = () => go((index - 1 + testimonials.length) % testimonials.length);
-  const next = () => go((index + 1) % testimonials.length);
-
-  const t = testimonials[index];
-
   return (
-    <section className="testimonial">
+    <section className="proof section">
       <div className="container">
-        <span className="section-label">Trust & Social Proof</span>
-
-        <div className="testimonial__stage">
-        <div className="testimonial__card">
-          <div className={`testimonial__inner ${visible ? 'testimonial__inner--visible' : ''}`}>
-            <div className="testimonial__quote-mark">"</div>
-            <p className="testimonial__text">{t.text}</p>
-            <div className="testimonial__author">
-              <div className="testimonial__avatar">{t.initial}</div>
-              <div>
-                <p className="testimonial__name">{t.name}</p>
-                <p className="testimonial__role">{t.role}</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className="proof__head reveal">
+          <span className="eyebrow">Trust</span>
+          <h2 className="display proof__title">Quietly, behind the people you'd recognize.</h2>
         </div>
 
-        <div className="testimonial__nav">
-          <button className="testimonial__nav-btn" onClick={prev}>&#8592;</button>
-          <div className="testimonial__dots">
-            {testimonials.map((_, i) => (
-              <button
-                key={i}
-                className={`testimonial__dot ${i === index ? 'testimonial__dot--active' : ''}`}
-                onClick={() => setIndex(i)}
-              />
-            ))}
-          </div>
-          <button className="testimonial__nav-btn" onClick={next}>&#8594;</button>
+        <div className="proof__grid">
+          {testimonials.map((t, i) => (
+            <figure className="proof__card reveal" key={t.name} style={{ transitionDelay: `${i * 110}ms` }}>
+              <blockquote className="proof__text">{t.text}</blockquote>
+              <figcaption className="proof__author">
+                <span className="proof__avatar" aria-hidden="true">{t.initial}</span>
+                <span className="proof__meta">
+                  <span className="proof__name">{t.name}</span>
+                  <span className="proof__role">{t.title}</span>
+                </span>
+              </figcaption>
+            </figure>
+          ))}
         </div>
-
-        <p className="testimonial__subtext">
-          Proudly supporting businesses across the US East Coast.
-        </p>
       </div>
     </section>
   );
