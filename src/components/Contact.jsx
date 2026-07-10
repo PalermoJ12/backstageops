@@ -50,8 +50,8 @@ export default function Contact() {
           </div>
 
           <div className="inquire__field">
-            <label htmlFor="business">Business / Practice</label>
-            <input id="business" name="business" type="text" placeholder="Label, studio, or practice name" />
+            <label htmlFor="business">Business</label>
+            <input id="business" name="business" type="text" placeholder="Label, studio, or business name" />
           </div>
 
           <div className="inquire__field">
